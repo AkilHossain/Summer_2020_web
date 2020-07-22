@@ -7,13 +7,19 @@ function NameValid()
     if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $name = $_POST["name"];
-        if(!isset($name))
+        if(!isset($name) )
         {
-            echo "Can not be empty.";
+            echo "can not keep empty.";
         }
-        elseif(!preg_match("/^[a-zA-Z]/",$name))
+       
+            
+        if(!preg_match("/^[a-zA-Z]/i",$name))
         {
             echo "it must have alphabets!";
+        }
+        else
+        {
+            echo $name;
         }
     }
 }
@@ -23,6 +29,20 @@ function NameValid()
 ?>
 
  
+
+<?php  
+
+ 
+
+    function EmailValid()
+    {
+        
+        
+    }
+
+ 
+
+?>
 
  
 
@@ -48,6 +68,19 @@ function NameValid()
                     <td><input type="submit" value="Submit">
                     <?php   NameValid();      ?>
                     </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    
+    <div>
+        <form method="post">
+            <table>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" name="email" value=""></td>
+                    <td><input type="submit" value="Submit"></td>
+                    
                 </tr>
             </table>
         </form>
