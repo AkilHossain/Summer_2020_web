@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Name Form</title>
+</head>
+<body>
+
+	<form name="myForm" onsubmit="return validateForm()" method="post">
+		Name: <input type="text" name="user_name" value="" placeholder="">
+		<br>
+			
+		<br/> 
+		<br/>
+
+
+Email: <input type="Email" name="user_email" value="">
+		<br>
+		 
+		<br/>
+
+		
+		 <fieldset>
+		  <legend>Gender</legend>
+		 	<input type="radio" name="user_gender">Male 
+			<input type="radio" name="user_gender"> Female
+			<input type="radio" name="user_gender">Other <br>
+
+			
+		 </fieldset>
+
+		 <br>
+
+		  <fieldset>
+		  <legend>Date of Birth</legend>
+		 	<input type="text" name="user_dob_date"> /
+		 	<input type="text" name="user_dob_month"> /
+		 	<input type="text" name="user_dob_year"><br>
+
+			
+		 </fieldset>
+		 <br>
+
+		  <fieldset>
+		  <legend>Degree</legend>
+		        <input type="checkbox" name="degree"> SSC
+				<input type="checkbox" name="degree"> HSC
+				<input type="checkbox" name="degree"> BSc.
+				<input type="checkbox" name="degree"> MSc.
+		 	
+			<br>
+			
+		 </fieldset>
+		 <br>
+		 Blood Group 
+		 <select name="blood_group">
+			<option>A-</option>
+			<option>A+</option>
+			<option>B+</option>
+			<option>AB-</option>
+			<option>AB+</option>
+			<option>B-</option>
+			<option>O+</option>
+			<option>O-</option>
+							
+		</select>
+		
+		        <br>
+		        
+		   		Photos    
+				<input type="button" name="" value="Browse"> No file Selected
+		 		
+				<br>
+		
+		<br>
+
+		<input type="submit" name="submit" value="Submit">
+	</form>
+	<script>
+	
+
+	function validateName() {
+	var x = document.forms["myForm"]["user_name"].value;
+	  if (x == "") {
+	    alert("Name must be filled out");
+
+	    return false;
+	  }
+	}
+
+	function validateEmail() {
+	var x = document.forms["myForm"]["user_email"].value;
+	  if (x == "") {
+	    alert("Email must be filled out");
+	    return false;
+	  }
+	}
+
+	 
+	function validateForm() {
+	  if( document.myForm.user_name.value == "" ) {
+            alert( "Please provide your name!" );
+            return false;
+        }
+      if( document.myForm.user_email.value == "" ) {
+            alert( "Please provide your Email!" );
+            return false;      
+	  }
+
+	  if( document.myForm.user_gender.value == "" ) {
+            alert( "Please provide your gender!" );
+            return false;      
+	  }
+
+	  if( document.myForm.user_dob_date.value == "" || document.myForm.user_dob_month.value == "" || document.myForm.user_dob_year.value == ""  ) {
+            alert( "Please provide your DOB!" );
+            return false;      
+	  }
+
+	  if (!document.myForm.degree.checked) 
+		    {
+		        alert ('You didn\'t choose any of the degree!');
+		        return false;
+		    }
+	  else
+		    {    
+		        return true;
+		    }
+
+	  if( document.myForm.blood_group.value == "" ) {
+            alert( "Please provide your blood_group!" );
+            return false;      
+	  }
+
+
+
+	  return true;
+	}
+
+	
+	</script>
+
+
+</body>
+</html>
