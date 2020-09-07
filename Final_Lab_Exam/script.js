@@ -1,16 +1,8 @@
 "use strict"
-//a = 10;
-var b =30;
-let c =40;
-const e = 50;
-
-//console.log('test');
-//alert('test');
-//document.write('hfbjh');
 
 function f1(){
 	var username = document.getElementById('username').value;
-	var password = document.getElementById('username').value;
+	var password = document.getElementById('password').value;
 
 	var error = false;
 	if(username == ""){
