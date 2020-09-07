@@ -6,7 +6,7 @@
         <table>
             <tr>
                 <td>Username</td>
-                <td><input type="text" id="username" name="username" onkeyup="f2"></td>
+                <td><input type="text" id="username" name="username" onkeyup="f2()"></td>
                 <td id="userMsg"></td>
             </tr>
             <tr>

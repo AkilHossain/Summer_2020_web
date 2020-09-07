@@ -42,6 +42,10 @@
 				}
 			}
     }
+
+    </script>
+	<input type="button" value="SearchEmployers" onclick="searchEmployer()">
+	<script>
 	
 </body>
 </html>
